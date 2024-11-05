@@ -1,6 +1,3 @@
-from src.category import Category
-
-
 def test_category_init(category_1, category_2):
     assert category_1.name == "Vegetables"
     assert category_1.description == "Fresh vegetables"
@@ -14,4 +11,3 @@ def test_category_init(category_1, category_2):
 
     assert category_1.category_count == 2
     assert category_2.all_product_count == 7
-

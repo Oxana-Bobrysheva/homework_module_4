@@ -18,3 +18,10 @@ class Category:
 
         Category.category_count += 1
         Category.all_product_count += len(products) if products else 0
+
+
+    @property
+        def add_products(self):
+            products_str = ""
+            for product in self.__products:
+                products_str += f"{product.name}, "

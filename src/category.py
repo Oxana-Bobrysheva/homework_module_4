@@ -14,14 +14,13 @@ class Category:
     def __init__(self, name, description, products):
         self.name = name
         self.description = description
-        self.products = products
+        self.__products = products
 
         Category.category_count += 1
         Category.all_product_count += len(products) if products else 0
 
 
-    @property
-        def add_products(self):
-            products_str = ""
-            for product in self.__products:
-                products_str += f"{product.name}, "
+    def add_products(self, new_product):
+
+        self.__products.append(new_product)
+        Category.all_product_count += 1

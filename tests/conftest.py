@@ -11,8 +11,15 @@ def category_1():
         description="Fresh vegetables",
         products=["potatoes", "tomatoes", "carrot"],
     )
-
-
+@pytest.fixture
+def category_with_products():
+    category = Category(
+        name="Vegetables",
+        description="Fresh vegetables",
+        products=[],
+    )
+    category.add_product(Product("potatoes", "Kursk origin", 40.5, 25))
+    return category
 @pytest.fixture
 def category_2():
     return Category(
@@ -25,3 +32,5 @@ def category_2():
 @pytest.fixture
 def product():
     return Product("potatoes", "Kursk origin", 40.5, 25)
+
+

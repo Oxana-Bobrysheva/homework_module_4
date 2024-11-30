@@ -37,7 +37,7 @@ class Category:
         """Getter returns list of products according to the request"""
         products_list = ""
         for product in self.__products:
-            products_list += f'{product.name}, {product.price} руб. Остаток: {product.quantity} шт.\n'
+            products_list += f'{str(product)}\n'
         return products_list
 
     @property

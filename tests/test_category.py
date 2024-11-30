@@ -1,5 +1,6 @@
 from src.product import Product
 from src.category import Category
+from tests.conftest import category_1
 
 
 def test_new_product_existing(category_with_products):
@@ -25,6 +26,14 @@ def test_add_product(category_1):
     # Test adding a product to a category
     new_product = Product('New Product', 'Description', 25.0, 10)
     category_1.add_product(new_product)
-    assert category_1.product_count == 6
+    assert category_1.product_count == 3
 
 
+def test_category_str(category_1):
+    assert str(category_1) == 'Vegetables, количество продуктов: 75 шт.'
+
+
+def test_products_getter(category_1):
+    assert  category_1.products == ('potatoes, 40.5руб. Остаток: 25шт.\n'
+ 'tomatoes, 140.5руб. Остаток: 15шт.\n'
+ 'carrots, 20.0руб. Остаток: 35шт.\n')

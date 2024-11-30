@@ -1,13 +1,30 @@
-def test_category_init(category_1, category_2):
-    assert category_1.name == "Vegetables"
-    assert category_1.description == "Fresh vegetables"
-    assert category_1.products == ["potatoes", "tomatoes", "carrot"]
-    assert category_2.name == "Fruit"
-    assert category_2.description == "Fresh fruit"
-    assert category_2.products == ["apples", "pears", "apricots", "peaches"]
+from src.product import Product
+from src.category import Category
 
-    assert len(category_1.products) == 3
-    assert len(category_2.products) == 4
 
-    assert category_1.category_count == 2
-    assert category_2.all_product_count == 7
+def test_new_product_existing(category_with_products):
+    # Test adding a new product that already exists
+    new_product_dict = {'name': 'potatoes', 'description': 'New Description', 'price': 15.0, 'quantity': 3}
+
+    existing_product = Product.new_product(new_product_dict, category_with_products)
+    assert existing_product.price == 40.5
+    assert existing_product.quantity == 28
+
+
+def test_new_product_not_existing(category_with_products):
+    # Test adding a new product that does not already exist
+    new_product_dict = {'name': 'New Product', 'description': 'Description', 'price': 20.0, 'quantity': 2}
+
+    new_product = Product.new_product(new_product_dict, category_with_products)
+    assert new_product.name == 'New Product'
+    assert new_product.price == 20.0
+    assert new_product.quantity == 2
+
+
+def test_add_product(category_1):
+    # Test adding a product to a category
+    new_product = Product('New Product', 'Description', 25.0, 10)
+    category_1.add_product(new_product)
+    assert category_1.product_count == 6
+
+

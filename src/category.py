@@ -16,6 +16,13 @@ class Category:
         self.description = description
         self.__products = products
 
+
+    def __str__(self):
+        total_quantity = 0
+        for product in self.__products:
+            total_quantity += product.quantity
+        return f"{self.name}, количество продуктов: {total_quantity} шт."
+
         Category.category_count += 1
         Category.product_count += len(products) if products else 0
 
@@ -30,7 +37,7 @@ class Category:
         """Getter returns list of products according to the request"""
         products_list = ""
         for product in self.__products:
-            products_list += f'{product.name}, {product.price} руб. Остаток: {product.quantity} шт.\n'
+            products_list += f'{str(product)}\n'
         return products_list
 
     @property

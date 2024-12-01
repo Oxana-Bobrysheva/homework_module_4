@@ -23,7 +23,7 @@ class Category:
         return f"{self.name}, количество продуктов: {total_quantity} шт."
 
         Category.category_count += 1
-        Category.product_count += len(products) if products else 0 # noqa
+        Category.product_count += len(products) if products else 0  # noqa
 
     def add_product(self, new_product):
         if isinstance(new_product, Product):

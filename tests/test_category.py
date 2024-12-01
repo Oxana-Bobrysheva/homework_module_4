@@ -34,6 +34,6 @@ def test_category_str(category_1):
 
 
 def test_products_getter(category_1):
-    assert  category_1.products == ('potatoes, 40.5руб. Остаток: 25шт.\n'
+    assert category_1.products == ('potatoes, 40.5руб. Остаток: 25шт.\n'
  'tomatoes, 140.5руб. Остаток: 15шт.\n'
  'carrots, 20.0руб. Остаток: 35шт.\n')

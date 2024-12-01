@@ -16,7 +16,6 @@ class Category:
         self.description = description
         self.__products = products
 
-
     def __str__(self):
         total_quantity = 0
         for product in self.__products:
@@ -24,8 +23,7 @@ class Category:
         return f"{self.name}, количество продуктов: {total_quantity} шт."
 
         Category.category_count += 1
-        Category.product_count += len(products) if products else 0
-
+        Category.product_count += len(products) if products else 0 # noqa
 
     def add_product(self, new_product):
         if isinstance(new_product, Product):
@@ -33,12 +31,13 @@ class Category:
             Category.product_count += 1
         else:
             raise TypeError
+
     @property
     def products(self):
         """Getter returns list of products according to the request"""
         products_list = ""
         for product in self.__products:
-            products_list += f'{str(product)}\n'
+            products_list += f"{str(product)}\n"
         return products_list
 
     @property

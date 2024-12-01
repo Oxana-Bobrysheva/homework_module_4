@@ -14,7 +14,7 @@ if __name__ == '__main__':
     print(smartphone1.efficiency)
     print(smartphone1.model)
     print(smartphone1.memory)
-    print(smartphone1.color)
+    print(smartphone1.colour)
 
     print(smartphone2.name)
     print(smartphone2.description)
@@ -23,7 +23,7 @@ if __name__ == '__main__':
     print(smartphone2.efficiency)
     print(smartphone2.model)
     print(smartphone2.memory)
-    print(smartphone2.color)
+    print(smartphone2.colour)
 
     print(smartphone3.name)
     print(smartphone3.description)
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     print(smartphone3.efficiency)
     print(smartphone3.model)
     print(smartphone3.memory)
-    print(smartphone3.color)
+    print(smartphone3.colour)
 
     grass1 = LawnGrass("Газонная трава", "Элитная трава для газона", 500.0, 20, "Россия", "7 дней", "Зеленый")
     grass2 = LawnGrass("Газонная трава 2", "Выносливая трава", 450.0, 15, "США", "5 дней", "Темно-зеленый")
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     print(grass1.quantity)
     print(grass1.country)
     print(grass1.germination_period)
-    print(grass1.color)
+    print(grass1.colour)
 
     print(grass2.name)
     print(grass2.description)
@@ -51,7 +51,7 @@ if __name__ == '__main__':
     print(grass2.quantity)
     print(grass2.country)
     print(grass2.germination_period)
-    print(grass2.color)
+    print(grass2.colour)
 
     smartphone_sum = smartphone1 + smartphone2
     print(smartphone_sum)

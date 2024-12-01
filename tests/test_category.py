@@ -1,12 +1,10 @@
 from src.product import Product
-from src.category import Category
 from tests.conftest import category_1
 
 
 def test_new_product_existing(category_with_products):
     # Test adding a new product that already exists
     new_product_dict = {'name': 'potatoes', 'description': 'New Description', 'price': 15.0, 'quantity': 3}
-
     existing_product = Product.new_product(new_product_dict, category_with_products)
     assert existing_product.price == 40.5
     assert existing_product.quantity == 28

@@ -13,3 +13,18 @@
    git clone https://github.com/Oxana-Bobrysheva/homework_module_4.git
    cd homework_module_4
    ```
+## Products
+Инициализация товара осуществляется.
+Реализована функция добавления товара, а также сложение стоимости в одной категории
+
+### Smartphones
+От родительского класса выделена отдельная группа товара и добавлены дополнительные аттрибуты
+
+### LawnGrass
+От родительского класса выделена отдельная группа товара и добавлены дополнительные аттрибуты
+
+## Categories
+
+## Tests
+
+## Abstract Class was used for Base Product and MixinInit

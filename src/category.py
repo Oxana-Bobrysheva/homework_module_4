@@ -15,6 +15,8 @@ class Category:
         self.name = name
         self.description = description
         self.__products = products
+        Category.category_count += 1
+        Category.product_count += len(products) if products else 0  # noqa
 
     def __str__(self):
         total_quantity = 0
@@ -22,8 +24,7 @@ class Category:
             total_quantity += product.quantity
         return f"{self.name}, количество продуктов: {total_quantity} шт."
 
-        Category.category_count += 1
-        Category.product_count += len(products) if products else 0  # noqa
+
 
     def add_product(self, new_product):
         if isinstance(new_product, Product):

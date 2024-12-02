@@ -26,3 +26,5 @@
 ## Categories
 
 ## Tests
+
+## Abstract Class was used for Base Product and MixinInit

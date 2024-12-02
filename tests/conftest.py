@@ -1,7 +1,7 @@
 import pytest
 
 from src.category import Category
-from src.LawnGrass import LawnGrass
+from src.lawn_grass import LawnGrass
 from src.product import Product
 from src.smartphone import Smartphone
 
@@ -28,15 +28,6 @@ def category_with_products():
     )
     category.add_product(Product("potatoes", "Kursk origin", 40.5, 25))
     return category
-
-
-# # @pytest.fixture
-# # def category_2():
-# #     return Category(
-# #         name="Fruit",
-# #         description="Fresh fruit",
-# #         products=["apples", "pears", "apricots", "peaches"],
-#     )
 
 
 @pytest.fixture

@@ -1,4 +1,4 @@
-from src.LawnGrass import LawnGrass
+from src.lawn_grass import LawnGrass
 
 
 def test_LawnGrass_init(grass_1):

@@ -1,4 +1,4 @@
-from src.LawnGrass import LawnGrass
+from src.lawn_grass import LawnGrass
 from src.category import Category
 from src.smartphone import Smartphone
 

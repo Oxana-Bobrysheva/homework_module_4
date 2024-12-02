@@ -24,12 +24,10 @@ class Category:
             total_quantity += product.quantity
         return f"{self.name}, количество продуктов: {total_quantity} шт."
 
-
-
     def add_product(self, new_product):
         if isinstance(new_product, Product):
             self.__products.append(new_product)
-            Category.product_count += 1
+            # Category.product_count += 1
         else:
             raise TypeError
 

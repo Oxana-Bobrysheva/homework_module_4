@@ -1,6 +1,7 @@
 from src.base_product import BaseProduct
 from src.mixin_init import MixinInit
 
+
 class Product(BaseProduct, MixinInit):
     """Класс для представления продукции"""
 
@@ -8,7 +9,6 @@ class Product(BaseProduct, MixinInit):
     description: str
     price: float
     quantity: int
-
 
     def __init__(self, name, description, price, quantity):
         self.name = name

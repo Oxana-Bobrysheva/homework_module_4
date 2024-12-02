@@ -1,10 +1,14 @@
-class Product:
+from src.base_product import BaseProduct
+
+
+class Product(BaseProduct):
     """Класс для представления продукции"""
 
     name: str
     description: str
     price: float
     quantity: int
+
 
     def __init__(self, name, description, price, quantity):
         self.name = name

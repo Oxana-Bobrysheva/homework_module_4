@@ -46,3 +46,10 @@ class Category:
         for product in self.__products:
             products_list.append(product)
         return products_list
+
+    def middle_price(self):
+        "Function that sums up all the prices in certain category and divides it by the amount of products"
+        try:
+            return round(sum([product.price for product in self.__products]) / len(self.__products), 2)
+        except ZeroDivisionError:
+            return 0

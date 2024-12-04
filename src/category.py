@@ -15,6 +15,8 @@ class Category:
         self.name = name
         self.description = description
         self.__products = products
+        Category.category_count += 1
+        Category.product_count += len(products) if products else 0  # noqa
 
     def __str__(self):
         total_quantity = 0
@@ -22,13 +24,10 @@ class Category:
             total_quantity += product.quantity
         return f"{self.name}, количество продуктов: {total_quantity} шт."
 
-        Category.category_count += 1
-        Category.product_count += len(products) if products else 0  # noqa
-
     def add_product(self, new_product):
         if isinstance(new_product, Product):
             self.__products.append(new_product)
-            Category.product_count += 1
+            # Category.product_count += 1
         else:
             raise TypeError
 
@@ -47,3 +46,10 @@ class Category:
         for product in self.__products:
             products_list.append(product)
         return products_list
+
+    def middle_price(self):
+        "Function that sums up all the prices in certain category and divides it by the amount of products"
+        try:
+            return round(sum([product.price for product in self.__products]) / len(self.__products), 2)
+        except ZeroDivisionError:
+            return 0

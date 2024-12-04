@@ -45,3 +45,12 @@ def smartphone_1():
 @pytest.fixture
 def grass_1():
     return LawnGrass("Cleverance", "For sports ground", 250, 23, "Russia", "6 weeks", "Greenish")
+
+
+@pytest.fixture
+def category_2():
+    return Category(
+        name="Vegetables",
+        description="Fresh vegetables",
+        products=[],
+    )

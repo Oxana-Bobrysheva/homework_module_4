@@ -1,5 +1,5 @@
 from src.product import Product
-from tests.conftest import category_1
+from tests.conftest import category_1, category_2
 
 
 def test_new_product_existing(category_with_products):
@@ -37,3 +37,13 @@ def test_products_getter(category_1):
         "tomatoes, 140.5руб. Остаток: 15шт.\n"
         "carrots, 20.0руб. Остаток: 35шт.\n"
     )
+
+
+def test_middle_price_exists(category_1):
+    "Test for function middle_price to verify that it finds right amount"
+    assert category_1.middle_price() == 67
+
+
+def test_middle_price_not_exist(category_2):
+    "Test for function middle_price to verify that is raises ZeroDivisionError"
+    assert category_2.middle_price() == 0
